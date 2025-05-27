@@ -1,0 +1,6 @@
+# Игнорировать все файлы resume.*
+resume.*
+
+# Исключить из игнорирования resume.pdf и resume.tex
+!resume.pdf
+!resume.tex

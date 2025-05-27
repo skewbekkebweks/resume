@@ -1,0 +1,197 @@
+%-------------------------
+% Резюме в LaTeX
+% Автор : Глазов Михаил
+% Основано на: https://github.com/sb2nov/resume
+% Лицензия : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{} % очищаем все поля
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Настройка полей
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Форматирование разделов
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Пользовательские команды
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Huge \scshape Глазов Михаил Николаевич} \\ \vspace{1pt}
+    \small +7 (961) 339-71-42 $|$ \href{mailto:mihail.glazov2015@yandex.ru}{\underline{mihail.glazov2015@yandex.ru}} $|$ 
+    \href{https://t.me/mikhailglazov}{\underline{Telegram: @mikhailglazov}} $|$
+    \href{https://github.com/skewbekkebweks}{\underline{github.com/skewbekkebweks}} $|$
+    \href{https://codeforces.com/profile/skewbekkebweks}{\underline{codeforces.com/profile/skewbekkebweks}}
+\end{center}
+
+%-----------ОБРАЗОВАНИЕ-----------
+\section{Образование}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Национальный исследовательский университет «Высшая школа экономики»}{Москва}
+      {Факультет компьютерных наук, Прикладная математика и информатика}{2028}
+  \resumeSubHeadingListEnd
+
+%-----------ОПЫТ РАБОТЫ-----------
+\section{Опыт работы}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Хакатон Finodays}{Москва}
+      {Python-разработчик}{Август 2023 -- Ноябрь 2023}
+      \resumeItemListStart
+        \resumeItem{Разработал backend для финтех-проекта на FastAPI с использованием Docker}
+        \resumeItem{Команда стала победителем на Finopolis 2024}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Хакатон "Лидеры цифровой трансформации"}{Москва}
+      {Python-разработчик}{Май 2024 -- Июнь 2024}
+      \resumeItemListStart
+        \resumeItem{Разработал алгоритм распределения заявок маломобильных пассажиров по волонтёрам}
+        \resumeItem{Реализовал REST API с использованием FastAPI}
+        \resumeItem{Команда стала финалистом хакатона}
+      \resumeItemListEnd
+    
+    \resumeSubheading
+      {NLogN}{Москва}
+      {Преподаватель алгоритмов}{Июнь 2024 -- Июль 2024}
+      \resumeItemListStart
+        \resumeItem{Чтение лекций и работа с детьми}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+%-----------ПРОЕКТЫ-----------
+\section{Проекты}
+    \resumeSubHeadingListStart
+
+      \resumeProjectHeading
+          {\textbf{Маркетплейс ЦФА} $|$ \emph{Python, FastAPI, Docker} | \href{https://github.com/avalanche05/finodays}{\underline{github}}}{2023}
+          \resumeItemListStart
+            \resumeItem{Разработан backend для маркетплейса финансовых активов}
+            \resumeItem{Реализовано REST API с использованием Docker}
+          \resumeItemListEnd
+        
+      \resumeProjectHeading
+          {\textbf{Сервис мониторинга заявок маломобильных пассажиров} $|$ \emph{Python, FastAPI, Алгоритмы} | \href{https://github.com/nizhgo/lct-2024}{\underline{github}}}{2024}
+          \resumeItemListStart
+            \resumeItem{Сервис для мониторинга и адаптивного распределения заявок}
+            \resumeItem{Реализован эффективный алгоритм сопоставления пассажиров и волонтёров}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{Архиватор файлов} $|$ \emph{C++, Алгоритм Хаффмана} | \href{https://github.com/skewbekkebweks/archiver/tree/main/tasks/archiver}{\underline{github}}}{2023}
+          \resumeItemListStart
+            \resumeItem{Реализовано сжатие файлов с использованием алгоритма Хаффмана}
+          \resumeItemListEnd
+          
+      \resumeProjectHeading
+          {\textbf{Приложение для занятий спортом} $|$ \emph{Java, Android} | \href{https://github.com/skewbekkebweks/chick}{\underline{Android}} | \href{https://github.com/skewbekkebweks/chick_server}{\underline{backend}}}{2022}
+          \resumeItemListStart
+            \resumeItem{Разработано мобильное приложение для фитнес-трекинга с серверной частью}
+          \resumeItemListEnd
+    \resumeSubHeadingListEnd
+  
+
+%-----------ДОСТИЖЕНИЯ-----------
+\section{Олимпиадный опыт}
+  \resumeSubHeadingListStart
+    \resumeItem{Участник финала ВКОШП (Всероссийская командная олимпиада школьников по программированию)}
+    \resumeItem{Участник заключительного этапа ВсОШ (Всероссийская олимпиада школьников) по информатике}
+    \resumeItem{Победитель МОШ (Московская олимпиада школьников) по информатике}
+    \resumeItem{Призёр Высшей пробы по информатике}
+    \resumeItem{Участник 1/4 финала ICPC (International Collegiate Programming Contest)}
+  \resumeSubHeadingListEnd
+
+%-----------КУРСЫ-----------
+\section{Курсы}
+  \resumeSubHeadingListStart
+    \resumeItem{Выпускник Яндекс.Лицея (программирование на Python)}
+    \resumeItem{Выпускник IT Школы Samsung (разработка на Java (Android и Spring-boot))}
+  \resumeSubHeadingListEnd
+
+%-----------НАВЫКИ-----------
+\section{Технические навыки}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Языки программирования}{: Python, C++, Java, SQL (PostgreSQL)} \\
+     \textbf{Фреймворки}{: FastAPI, Django, Android SDK, Spring Boot} \\
+     \textbf{Инструменты}{: Git, Docker, MongoDB, REST API} \\
+     \textbf{Алгоритмы}{: Структуры данных, Олимпиадное программирование} \\
+     \textbf{Языки}{: Русский (родной), Английский (B2)}
+    }}
+ \end{itemize}
+
+
+\end{document}
