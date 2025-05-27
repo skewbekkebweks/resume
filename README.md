@@ -1,2 +1,1 @@
-# Resume
-https://skewbekkebweks.github.io/resume/
+# Mikhail Glazov CV
